@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="AI Text Summarizer powered by a fine-tuned T5 Transformer model"
+    >
+
+    <title>AI Text Summarizer</title>
+
+    <!-- Main stylesheet served by FastAPI -->
+    <link
+        rel="stylesheet"
+        href="/static/style.css"
+    >
+</head>
+
+
+<body>
+
+    <main class="page">
+
+        <section
+            class="app-card"
+            aria-labelledby="app-title"
+        >
+
+            <!-- ================================
+                 HEADER
+            ================================= -->
+
+            <header class="app-header">
+
+                <div
+                    class="brand-icon"
+                    aria-hidden="true"
+                >
+                    AI
+                </div>
+
+                <div class="brand-text">
+
+                    <h1 id="app-title">
+                        AI Text Summarizer
+                    </h1>
+
+                    <p>
+                        Powered by Hugging Face Transformer
+                    </p>
+
+                </div>
+
+                <span class="status-badge">
+                    ● AI MODEL
+                </span>
+
+            </header>
+
+
+            <!-- ================================
+                 INTRODUCTION
+            ================================= -->
+
+            <section class="intro">
+
+                <span class="eyebrow">
+                    TEXT INTELLIGENCE
+                </span>
+
+                <h2>
+                    Turn long content into
+                    <span>concise summaries.</span>
+                </h2>
+
+                <p>
+                    Paste your text below and let the fine-tuned
+                    Transformer model extract the most important
+                    information.
+                </p>
+
+            </section>
+
+
+            <!-- ================================
+                 SUMMARIZATION FORM
+            ================================= -->
+
+            <form
+                id="summarization-form"
+                novalidate
+            >
+
+                <!-- Input heading -->
+
+                <div class="section-header">
+
+                    <div>
+
+                        <label
+                            for="dialogue-input"
+                        >
+                            Your Content
+                        </label>
+
+                        <p>
+                            Paste an article, dialogue, report,
+                            or any text.
+                        </p>
+
+                    </div>
+
+                    <span class="input-label">
+                        INPUT
+                    </span>
+
+                </div>
+
+
+                <!-- Text input -->
+
+                <div class="input-wrapper">
+
+                    <textarea
+                        id="dialogue-input"
+                        name="dialogue"
+                        placeholder="Paste your content here..."
+                        aria-label="Content to summarize"
+                        required
+                    ></textarea>
+
+
+                    <div class="input-footer">
+
+                        <span>
+                            AI-powered summarization
+                        </span>
+
+                        <span>
+                            Text input
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Summarize button -->
+
+                <button
+                    type="submit"
+                    class="summarize-btn"
+                >
+
+                    <span
+                        class="btn-icon"
+                        aria-hidden="true"
+                    >
+                        ✦
+                    </span>
+
+                    <span class="btn-text">
+                        Summarize Content
+                    </span>
+
+                    <span
+                        class="arrow"
+                        aria-hidden="true"
+                    >
+                        →
+                    </span>
+
+                </button>
+
+            </form>
+
+
+            <!-- ================================
+                 SUMMARY OUTPUT
+            ================================= -->
+
+            <section
+                id="summary-output"
+                class="summary-card"
+                aria-labelledby="summary-heading"
+            >
+
+                <div class="summary-header">
+
+                    <div>
+
+                        <span class="output-label">
+                            AI OUTPUT
+                        </span>
+
+                        <h3 id="summary-heading">
+                            Content Summary
+                        </h3>
+
+                    </div>
+
+                    <div
+                        class="summary-icon"
+                        aria-hidden="true"
+                    >
+                        ✦
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="summary-content"
+                    aria-live="polite"
+                >
+
+                    <p id="summary-text">
+                        Your generated summary will appear here.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================================
+                 FOOTER
+            ================================= -->
+
+            <footer class="app-footer">
+
+                <div class="tech-stack">
+
+                    <span>Python</span>
+                    <span>FastAPI</span>
+                    <span>Hugging Face</span>
+                    <span>T5 Transformer</span>
+
+                </div>
+
+                <p>
+                    Built as a Deep Learning NLP project
+                </p>
+
+            </footer>
+
+        </section>
+
+    </main>
+
+
+    <!-- JavaScript served by FastAPI -->
+    <script src="/static/script.js"></script>
+
+</body>
+
+</html>
